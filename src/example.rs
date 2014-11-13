@@ -38,14 +38,16 @@ impl Example {
                    number: Vec<uint>,
                    tx: Sender<(Vec<uint>, String)>,
                    indent: uint,
-                   prefix: String)
+                   prefix: String,
+                   postfix: String)
     {
         let id = self.id.as_slice();
         let prefix = prefix.as_slice();
+        let postfix = postfix.as_slice();
         let title = self.title.as_slice();
 
         let entry =
-            match Markdown::process(number.as_slice(), id, title, prefix) {
+            match Markdown::process(number.as_slice(), id, title, prefix, postfix) {
                 Ok(_) => {
                     let md = if prefix.chars().all(|c| c.is_whitespace()) {
                         format!("{}.md", id)
@@ -88,7 +90,8 @@ impl Example {
                     example.process(number,
                                     tx,
                                     indent + 1,
-                                    prefix);
+                                    prefix,
+                                    postfix.to_string());
                 }
             },
         }

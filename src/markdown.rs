@@ -9,10 +9,10 @@ pub struct Markdown<'a, 'b> {
 }
 
 impl<'a, 'b> Markdown<'a, 'b> {
-    pub fn process(number: &[uint], id: &'a str, title: &str, prefix: &'b str)
-        -> Result<(), String>
+    pub fn process(number: &[uint], id: &'a str, title: &str,
+        prefix: &'b str, postfix: &str) -> Result<(), String>
     {
-        let mut mkd = try!(Markdown::new(number, id, title, prefix));
+        let mut mkd = try!(Markdown::new(number, id, title, prefix, postfix));
 
         try!(mkd.insert_sources());
         try!(mkd.insert_outputs());
@@ -22,11 +22,24 @@ impl<'a, 'b> Markdown<'a, 'b> {
         Ok(())
     }
 
-    fn new(number: &[uint], id: &'a str, title: &str, prefix: &'b str)
+    fn new(number: &[uint], id: &'a str, title: &str, prefix: &'b str, postfix: &str)
         -> Result<Markdown<'a, 'b>, String>
     {
-        let path = Path::new(format!("examples/{}/{}/input.md", prefix, id));
-        let body = try!(file::read(&path));
+        let path = Path::new(format!("examples/{}/{}/input{}.md", prefix, id, postfix));
+
+        let body = if postfix.len() == 0 {
+            try!(file::read(&path))
+        } else {
+            match file::read(&path) {
+                Ok(body) => body,
+                Err(_)   => {
+                    let no_postfix_path = Path::new(format!("examples/{}/{}/input.md", prefix, id));
+                    println!("try open: {}", no_postfix_path.display());
+                    try!(file::read(&no_postfix_path))
+                }
+            }
+        };
+
         let version = number.iter().map(|x| {
             format!("{}", x)
         }).collect::<Vec<String>>().connect(".");
