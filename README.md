@@ -1,6 +1,10 @@
 [![Build Status][travis-image]][travis-link]
 # Rust by Example
 
+## 中文版译者注意
+
+请直接翻译修改 examples 目录及其子目录内的 input_zh-CN.md 文件。尽量不要改其他文件，以方便合并来自 upstream 的更新。
+
 ## What's this?
 
 This is the source code of the
