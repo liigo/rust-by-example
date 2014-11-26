@@ -6,6 +6,7 @@ extern crate regex;
 extern crate regex_macros;
 extern crate serialize;
 
+use std::os;
 use example::Example;
 
 mod example;
@@ -14,6 +15,13 @@ mod markdown;
 mod playpen;
 
 fn main() {
+    let args = os::args();
+    let mut postfix = String::new();
+    if args.len() > 1 && !args[1].as_slice().is_empty() {
+        postfix.push('_');
+        postfix.push_str(args[1].as_slice()); // language code such as "zh-CN"
+    }
+
     let examples = Example::get_list();
     let (tx, rx) = channel();
 
@@ -21,9 +29,10 @@ fn main() {
     for (i, example) in examples.into_iter().enumerate() {
         let tx = tx.clone();
         let count = example.count();
+        let postfix = postfix.clone();
 
         spawn(proc() {
-            example.process(vec!(i + 1), tx, 0, String::new());
+            example.process(vec!(i + 1), tx, 0, String::new(), postfix);
         });
 
         nexamples += count;
