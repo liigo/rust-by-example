@@ -25,9 +25,14 @@ srcs = $(filter-out $(WHITELIST),$(shell find examples -name '*.rs'))
 .PHONY: all book clean test serve
 
 all:
-	./setup-stage.sh
+	./setup-stage.sh zh-CN
 	$(RUSTC) src/update.rs --out-dir bin
 	bin/update zh-CN
+
+en:
+	./setup-stage.sh
+	$(RUSTC) src/update.rs --out-dir bin
+	bin/update
 
 book:
 	cd stage && $(GITBOOK) build
