@@ -12,8 +12,8 @@ pub struct Example {
 }
 
 impl Example {
-    pub fn get_list() -> Vec<Example> {
-        match file::read(&Path::new("examples/structure.json")) {
+    pub fn get_list(postfix: &str) -> Vec<Example> {
+        match file::read(&Path::new(format!("examples/structure{}.json", postfix))) {
             Err(why) => panic!("{}", why),
             Ok(string) => match json::from_str(string.as_slice()) {
                 Err(_) => panic!("structure.json is not valid json"),

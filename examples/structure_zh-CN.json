@@ -1,0 +1,135 @@
+[
+  { "id": "hello", "title": "你好世界", "children": null },
+  { "id": "print", "title": "格式化输出", "children": null },
+  { "id": "literals", "title": "字面常量和操作符", "children": null },
+  { "id": "variables", "title": "变量", "children": [
+      { "id": "mut", "title": "可变性", "children": null },
+      { "id": "scope", "title": "作用域和覆盖", "children": null },
+      { "id": "declare", "title": "先声明再使用", "children": null }
+  ] },
+  { "id": "type", "title": "类型", "children": [
+      { "id": "cast", "title": "转换", "children": null },
+      { "id": "literals", "title": "字面常量", "children": null },
+      { "id": "inference", "title": "推断", "children": null },
+      { "id": "alias", "title": "别名", "children": null }
+  ] },
+  { "id": "expression", "title": "表达式", "children": null },
+  { "id": "if-else", "title": "if和else", "children": null },
+  { "id": "loop", "title": "循环loop", "children": [
+      { "id": "nested", "title": "嵌套和标签", "children": null }
+  ] },
+  { "id": "while", "title": "循环while", "children": null },
+  { "id": "for", "title": "for和range", "children": null },
+  { "id": "fn", "title": "函数", "children": [
+      { "id": "unused", "title": "未用到", "children": null }
+  ] },
+  { "id": "mod", "title": "模块(Modules)", "children": [
+      { "id": "visibility", "title": "可见性", "children": null },
+      { "id": "use", "title": "导入", "children": null },
+      { "id": "super", "title": "super和self", "children": null },
+      { "id": "split", "title": "文件层次", "children": null }
+  ] },
+  { "id": "crates", "title": "库(Crates)", "children": [
+      { "id": "lib", "title": "库", "children": null },
+      { "id": "link", "title": "`extern crate`", "children": null }
+  ] },
+  { "id": "attribute", "title": "属性(Attributes)", "children": [
+      { "id": "crate", "title": "库", "children": null },
+      { "id": "cfg", "title": "`cfg`", "children": [
+          { "id": "custom", "title": "Custom", "children": null }
+      ] }
+  ] },
+  { "id": "tuples", "title": "元组(Tuples)", "children": null },
+  { "id": "match", "title": "模式匹配", "children": [
+      { "id": "guard", "title": "解构和防护", "children": null }
+  ] },
+  { "id": "structs", "title": "结构体", "children": [
+      { "id": "visibility", "title": "可见性", "children": null }
+  ] },
+  { "id": "generics", "title": "泛型", "children": null },
+  { "id": "box", "title": "Box, 栈和堆", "children": null },
+  { "id": "raii", "title": "RAII", "children": null },
+  { "id": "move", "title": "所有权和转移", "children": [
+      { "id": "mut", "title": "可变性", "children": null }
+  ] },
+  { "id": "borrow", "title": "借用", "children": [
+      { "id": "mut", "title": "可变性", "children": null },
+      { "id": "freeze", "title": "冻结", "children": null },
+      { "id": "alias", "title": "别名", "children": null },
+      { "id": "ref", "title": "ref模式", "children": null }
+  ] },
+  { "id": "lifetime", "title": "生命期", "children": [
+      { "id": "borrow", "title": "借用检查(borrow checker)", "children": null },
+      { "id": "fn", "title": "函数", "children": null },
+      { "id": "struct", "title": "结构体", "children": null }
+  ] },
+  { "id": "constants", "title": "全局常量", "children": null },
+  { "id": "methods", "title": "方法", "children": null },
+  { "id": "enum", "title": "枚举", "children": [
+      { "id": "c-like", "title": "类C枚举", "children": null }
+  ] },
+  { "id": "panic", "title": "叛逆`panic!`", "children": null },
+  { "id": "option", "title": "可空`Option`", "children": null },
+  { "id": "array", "title": "数组和切片(slice)", "children": null },
+  { "id": "trait", "title": "接口(Traits)", "children": [
+      { "id": "deriving", "title": "衍生(deriving)", "children": null }
+  ] },
+  { "id": "ops", "title": "操作符重载", "children": null },
+  { "id": "bounds", "title": "边界(Bounds)", "children": null },
+  { "id": "drop", "title": "析构Drop", "children": null },
+  { "id": "iter", "title": "迭代器", "children": null },
+  { "id": "closures", "title": "闭包", "children": null },
+  { "id": "hof", "title": "高阶函数", "children": null },
+  { "id": "vec", "title": "Vectors", "children": null },
+  { "id": "str", "title": "字符串", "children": null },
+  { "id": "clone", "title": "克隆", "children": null },
+  { "id": "tasks", "title": "任务", "children": null },
+  { "id": "channels", "title": "通道", "children": null },
+  { "id": "timers", "title": "定时器", "children": null },
+  { "id": "sockets", "title": "套接字", "children": null },
+  { "id": "result", "title": "`Result`", "children": [
+      { "id": "try", "title": "`try!`", "children": null }
+  ] },
+  { "id": "path", "title": "路径", "children": null },
+  { "id": "file", "title": "文件I/O", "children": [
+      { "id": "open", "title": "`open`", "children": null },
+      { "id": "create", "title": "`create`", "children": null }
+  ] },
+  { "id": "process", "title": "子进程", "children": [
+      { "id": "pipe", "title": "管道", "children": null },
+      { "id": "wait", "title": "等待", "children": null }
+  ] },
+  { "id": "fs", "title": "文件系统", "children": null },
+  { "id": "staging", "title": "其他", "children": [
+    { "id": "bench", "title": "基准测试", "children": null  },
+    { "id": "ffi", "title": "外部函数接口FFI", "children": null  },
+    { "id": "macros", "title": "定义宏`macro_rules!`", "children": null  },
+    { "id": "rand", "title": "随机数", "children": null  },
+    { "id": "simd", "title": "SIMD", "children": null  },
+    { "id": "test", "title": "测试", "children": null  },
+    { "id": "unsafe", "title": "不安全操作", "children": null  },
+    { "id": "json", "title": "解析JSON", "children": [
+        { "id": "json-enum", "title": "`Json`", "children": null },
+        { "id": "decodable", "title": "`Decodable`", "children": null },
+        { "id": "encodable", "title": "`Encodable`", "children": null }
+    ] },
+    { "id": "fmt", "title": "格式化文本", "children": null },
+    { "id": "hash", "title": "哈希表(HashMap)", "children": [
+        { "id": "alt-key-types", "title": "Alternate/custom key types", "children": null},
+        { "id": "hashset", "title": "哈希集(HashSet)", "children": null },
+        { "id": "smallintmap", "title": "小整数表(SmallIntMap)", "children": null }
+    ] }
+  ] },
+  { "id": "todo", "title": "待续", "children": [
+    { "id": "arg", "title": "程序参数", "children": null },
+    { "id": "assert", "title": "`assert!`和`debug_assert!`", "children": null },
+    { "id": "comment", "title": "注释", "children": null },
+    { "id": "green", "title": "绿色线程", "children": null },
+    { "id": "log", "title": "日志", "children": null },
+    { "id": "rc", "title": "引用计数", "children": null },
+    { "id": "regex", "title": "正则表达式", "children": null },
+    { "id": "rustdoc", "title": "rustdoc", "children": null },
+    { "id": "select", "title": "select!", "children": null },
+    { "id": "stdio", "title": "标准I/O", "children": null }
+  ] }
+]
