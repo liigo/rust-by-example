@@ -22,7 +22,7 @@ fn main() {
         postfix.push_str(args[1].as_slice()); // language code such as "zh-CN"
     }
 
-    let examples = Example::get_list();
+    let examples = Example::get_list(postfix.as_slice());
     let (tx, rx) = channel();
 
     let mut nexamples = 0;
