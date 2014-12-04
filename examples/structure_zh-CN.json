@@ -41,7 +41,8 @@
   ] },
   { "id": "tuples", "title": "元组(Tuples)", "children": null },
   { "id": "match", "title": "模式匹配", "children": [
-      { "id": "guard", "title": "解构和防护", "children": null }
+      { "id": "guard", "title": "解构和防护", "children": null },
+      { "id": "struct", "title": "解构结构体", "children": null }
   ] },
   { "id": "structs", "title": "结构体", "children": [
       { "id": "visibility", "title": "可见性", "children": null }
@@ -116,8 +117,7 @@
     { "id": "fmt", "title": "格式化文本", "children": null },
     { "id": "hash", "title": "哈希表(HashMap)", "children": [
         { "id": "alt-key-types", "title": "Alternate/custom key types", "children": null},
-        { "id": "hashset", "title": "哈希集(HashSet)", "children": null },
-        { "id": "smallintmap", "title": "小整数表(SmallIntMap)", "children": null }
+        { "id": "hashset", "title": "哈希集(HashSet)", "children": null }
     ] }
   ] },
   { "id": "todo", "title": "待续", "children": [

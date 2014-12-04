@@ -41,7 +41,8 @@
   ] },
   { "id": "tuples", "title": "Tuples", "children": null },
   { "id": "match", "title": "Pattern matching", "children": [
-      { "id": "guard", "title": "Destructuring and guards", "children": null }
+      { "id": "guard", "title": "Destructuring and guards", "children": null },
+      { "id": "struct", "title": "Destructuring structs", "children": null }
   ] },
   { "id": "structs", "title": "Structures", "children": [
       { "id": "visibility", "title": "Visibility", "children": null }
@@ -116,8 +117,7 @@
     { "id": "fmt", "title": "Formatting", "children": null },
     { "id": "hash", "title": "HashMap", "children": [
         { "id": "alt-key-types", "title": "Alternate/custom key types", "children": null},
-        { "id": "hashset", "title": "HashSet", "children": null },
-        { "id": "smallintmap", "title": "SmallIntMap", "children": null }
+        { "id": "hashset", "title": "HashSet", "children": null }
     ] }
   ] },
   { "id": "todo", "title": "TODO", "children": [
