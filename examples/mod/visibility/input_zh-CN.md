@@ -1,5 +1,3 @@
-By default, the items in a module have private visibility, but this can be
-overridden with the `pub` modifier. Only the public items of a module can be
-accessed from outside the module scope.
+默认情况, 模块里的条目的可见性是私有的, 但是可以使用 `pub` 将其设置成公开有. 在模块内, 只有 public 条目允许在模块外部访问.
 
 {visibility.play}
