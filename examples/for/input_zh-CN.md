@@ -1,8 +1,5 @@
-The `for in` construct can be used to iterate an `Iterator`, a lazy value
-generator (more details later). One of the most common iterators is the `range`
-function. `range(a, b)` will yield values from `a` (inclusive) to `b`
-(exclusive) in steps of one.
+`for in`语句用于遍历迭代器（Iterator）。迭代器是一个惰性的值生成器（详见后文）。`range`函数（返回值）是最常见的迭代器之一。`range(a, b)`返回一个迭代器，取值从`a`开始逐次加1直到b（不包含b）。
 
-Let's write fizzbuzz using `for` instead of `while`.
+让我们写一个fizzbuzz，使用`for`循环而不是`while`。
 
 {for.play}

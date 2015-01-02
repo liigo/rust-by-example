@@ -1,5 +1,5 @@
-The `while` keyword can be used to loop until a condition is met.
+`while`关键字用于执行一个条件循环。
 
-Let's write the infamous fizzbuzz using a `while` loop.
+让我们用`while`循环写一个非著名的fizzbuzz程序。
 
 {while.play}

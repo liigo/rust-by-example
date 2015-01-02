@@ -1,11 +1,7 @@
-Functions are declared using the `fn` keyword. Its arguments are type
-annotated, just like variables; and, if the function returns a value, the
-return type must be specified after an arrow `->`.
+`fn`关键字用于定义函数。函数的参数需要指定类型。如果函数有返回值，必须在`->`后面写明返回值类型。
 
-The final expression in the function will be used as return value.
-Alternatively, the `return` statement can be used to return a value earlier
-from within the function, even from inside loops or ifs.
+函数体的最后一个表达式将被作为函数的返回值。或者，使用`return`语句提前返回一个值，即使在循环内也可以。
 
-Let's rewrite fizzbuzz using functions!
+让我们用函数重写fizzbuzz。
 
 {fn.play}

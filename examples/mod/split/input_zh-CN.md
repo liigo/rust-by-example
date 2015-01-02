@@ -1,5 +1,4 @@
-Modules can be mapped to a file/directory hierarchy. Let's break down the
-[visibility example](/mod/visibility.html) in files:
+模块可被映射到文件或目录层次。让我们把[可见性](/mod/visibility.html)示例代码分散到多个文件：
 
 ```
 $ tree .
@@ -19,7 +18,7 @@ $ tree .
 
 {my/inaccessible.rs}
 
-Let's check that things still work as before:
+检查代码仍像之前一样运作正常：
 
 ```
 $ rustc split.rs && ./split
