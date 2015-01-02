@@ -8,6 +8,7 @@ extern crate serialize;
 
 use std::os;
 use example::Example;
+use std::thread::Thread;
 
 mod example;
 mod file;
@@ -31,9 +32,9 @@ fn main() {
         let count = example.count();
         let postfix = postfix.clone();
 
-        spawn(proc() {
+        Thread::spawn(move || {
             example.process(vec!(i + 1), tx, 0, String::new(), postfix);
-        });
+        }).detach();
 
         nexamples += count;
     }

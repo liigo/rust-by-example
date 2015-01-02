@@ -1,17 +1,21 @@
 language: node_js
 
-before_install:
-  - sudo add-apt-repository --yes ppa:hansjorg/rust
-  - sudo apt-get update -qq
-
 install:
-  - npm install gitbook -g
-  - sudo apt-get install -qq rust-nightly
+  - npm install gitbook@0.7.1 -g
+  - curl -s https://static.rust-lang.org/rustup.sh | sudo sh > /dev/null
 
 script:
   - rustc --version
   - make
   - make test
+  - make book
+
+after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
 
 branches:
   only: master
+
+env:
+  global:
+    - secure: "oFD/tic8JAwpMXuMDBZXV4ot6w1NLWvHQTrDKmUHSMQJC1cbbrR1p5q8XayfjtmdqQdFQmIfM6YHEKeHw//ypgObWjYS8q00OaaMDXPTdmgr1Ee4nhgkkDihT+kVij0rn96W/QvyAVoaV5hJoyUr3Nhk+mnHEYm3M+Q3LAQglRg="

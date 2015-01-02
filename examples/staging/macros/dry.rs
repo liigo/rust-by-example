@@ -13,20 +13,21 @@ macro_rules! assert_equal_len {
 
 macro_rules! op {
     ($func:ident, $bound:ident, $op:tt, $method:ident) => {
-        fn $func<T: $bound<T, T>>(xs: &mut Vec<T>, ys: &Vec<T>) {
+        fn $func<T: $bound<T, T> + Copy>(xs: &mut Vec<T>, ys: &Vec<T>) {
             assert_equal_len!(xs, ys, $func, $op);
 
             for (x, y) in xs.iter_mut().zip(ys.iter()) {
-                *x = x.$method(y);
+                *x = $bound::$method(*x, *y);
+                // *x = x.$method(*y);
             }
         }
     }
 }
 
 // implement add_assign, mul_assign, and sub_assign functions
-op!(add_assign, Add, +=, add)
-op!(mul_assign, Mul, *=, mul)
-op!(sub_assign, Sub, -=, sub)
+op!(add_assign, Add, +=, add);
+op!(mul_assign, Mul, *=, mul);
+op!(sub_assign, Sub, -=, sub);
 
 fn main() {
     let mut xs = Vec::from_elem(5, 0f64);
@@ -55,7 +56,7 @@ mod test {
     }
 
     // test add_assign, mul_assign and sub_assign
-    test!(add_assign, 1u, 2u, 3u)
-    test!(mul_assign, 2u, 3u, 6u)
-    test!(sub_assign, 3u, 2u, 1u)
+    test!(add_assign, 1u, 2u, 3u);
+    test!(mul_assign, 2u, 3u, 6u);
+    test!(sub_assign, 3u, 2u, 1u);
 }

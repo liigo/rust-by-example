@@ -8,7 +8,7 @@ fn main() {
     println!("Initial vector: {}", xs);
 
     // Insert new element at the end of the vector
-    println!("Push 4 into the vector")
+    println!("Push 4 into the vector");
     xs.push(4);
     println!("Vector: {}", xs);
 
