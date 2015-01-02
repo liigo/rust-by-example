@@ -13,9 +13,9 @@ fn main() {
                       0.1f32, 0.2f64,
                       'a', true);
 
-    // Values can be extracted from the tuple using the `valN` methods
-    println!("long tuple first value: {}", long_tuple.val0());
-    println!("long tuple second value: {}", long_tuple.val1());
+    // Values can be extracted from the tuple using the `.N` syntax
+    println!("long tuple first value: {}", long_tuple.0);
+    println!("long tuple second value: {}", long_tuple.1);
 
     // Tuples can be tuple members
     let tuple_of_tuples = ((1u8, 2u16, 2u32), (4u64, -1i8), -2i16);
